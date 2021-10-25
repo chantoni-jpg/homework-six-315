@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+}
+
+.app {
+  height: 100%;
+}
+
+@font-face {
+  font-family: Caveat Reg;
+  src: url(../css/fonts/Caveat-Regular.ttf);
+}
+@font-face {
+  font-family: Caveat B;
+  src: url(../css/fonts/Caveat-Bold.ttf);
+}
+@font-face {
+  font-family: Lato;
+  src: url(../css/fonts/Lato-Black.ttf);
+}
+.logo {
+  position: fixed;
+  top: 50px;
+  left: 20px;
+  width: 140px;
+  height: 47px;
+  background-image: url(../images/logo.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.link-nav {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  width: 710px;
+  height: 50px;
+}
+.link-nav a {
+  text-decoration: none;
+  font-size: 25px;
+  margin-left: 73px;
+  font-family: Caveat Reg;
+  color: #000;
+}
+.link-nav button {
+  background-color: #ffd972;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 50px;
+  font-size: 16px;
+  padding: 15px 40px;
+  text-align: center;
+  border-radius: 20px;
+  border: none;
+  font-family: Caveat Reg;
+  -webkit-box-shadow: 2px 5px 2px #888888;
+          box-shadow: 2px 5px 2px #888888;
+}
+.link-nav #line {
+  text-decoration: underline;
+}
+
+nav {
+  display: none;
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  width: 50px;
+  height: 50px;
+}
+nav .fas {
+  font-size: 34px;
+}
+
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+  .link-nav {
+    display: none;
+  }
+
+  nav {
+    display: block;
+  }
+}
+@media screen and (max-width: 360px) and (max-height: 700px) {
+  .link-nav {
+    display: none;
+  }
+
+  nav {
+    display: block;
+  }
+}
+.footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.footer p {
+  font-size: 15px;
+  font-family: Caveat Reg;
+  color: #000;
+  margin-top: 15px;
+}
+.footer .link-footer a {
+  text-decoration: none;
+  font-size: 15px;
+  margin-left: 100px;
+  font-family: Caveat B;
+  color: #000;
+}
+.footer .link-footer .socials {
+  width: 100px;
+  position: absolute;
+  left: 1400px;
+  top: 20px;
+  background-image: url(../images/facebook.svg);
+  width: 19px;
+  height: 19px;
+}
+.footer .link-footer .socials .face {
+  background-image: url(../images/instagram.svg);
+  width: 19px;
+  height: 19px;
+  position: absolute;
+  left: 30px;
+}
+
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+  .block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media screen and (max-width: 360px) and (max-height: 700px) {
+  .block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.login {
+  width: 100%;
+  height: 100%;
+  background-color: #ffd972;
+}
+.login .sign-up {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 800px;
+  padding-top: 150px;
+}
+.login .sign-up p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 20px;
+  font-family: Lato;
+  font-size: 12px;
+}
+.login .login-screen {
+  position: relative;
+  bottom: 400px;
+  right: 300px;
+}
+.login .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-top: 50px;
+}
+.login h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 30px;
+  padding-bottom: 40px;
+  font-family: Lato;
+}
+.login input[type=text] {
+  width: 100%;
+  display: block;
+  border: none;
+  border-bottom: 2px solid black;
+  background-color: #ffd972;
+  margin: 20px;
+}
+.login input[type=password] {
+  width: 100%;
+  display: block;
+  border: none;
+  border-bottom: 2px solid black;
+  background-color: #ffd972;
+  margin: 20px;
+}
+.login button {
+  background-color: #ffd972;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 50px;
+  font-size: 16px;
+  padding: 15px 40px;
+  text-align: center;
+  border-radius: 20px;
+  border: none;
+  font-family: Caveat Reg;
+  -webkit-box-shadow: 2px 5px 2px #888888;
+          box-shadow: 2px 5px 2px #888888;
+}
+
+@media all and (max-width: 768px) and (max-height: 1024px) {
+  .login {
+    width: 768px;
+    height: 1024px;
+  }
+  .login .form {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .login .sign-up {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: left;
+        -ms-flex-align: left;
+            align-items: left;
+    padding-right: 500px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+@media screen and (max-width: 360px) and (max-height: 700px) {
+  .login {
+    width: 360px;
+    height: 700px;
+  }
+}
