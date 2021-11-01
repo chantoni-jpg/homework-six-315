@@ -58,8 +58,8 @@ function createUser() {
 function login() {
   let password = $("#password").val();
   let email = $("#email").val();
-  let fName = $("#password").val();
-  let lName = "An";
+  let fName = $("#fname").val();
+  let lName = $("#lname").val();
   firebase
     .auth()
     .signInWithEmailAndPassword(email, password)
