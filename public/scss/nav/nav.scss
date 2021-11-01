@@ -84,6 +84,8 @@ nav {
   }
   nav {
     display: block;
+    position: relative;
+    left: 300px;
   }
 }
 @media screen and (max-width: 360px) and (max-height: 700px) {
@@ -92,5 +94,7 @@ nav {
   }
   nav {
     display: block;
+    position: relative;
+    left: 300px;
   }
 }

@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
@@ -30,20 +29,21 @@
                 <form action="">
                     <p>don't have an account?</p>
                     <h1>Sign Up!</h1>
-                    <input type="text" id="email" placeholder="First Name"><br>
-                    <input type="text" id="password" placeholder="Last Name"><br>
+                    <input type="text" id="fname" placeholder="First Name"><br>
+                    <input type="text" id="lname" placeholder="Last Name"><br>
                     <input type="text" id="email" placeholder="Email Address"><br>
                     <input type="password" id="password" placeholder="Password"><br>
-                    <button>Sign Up!</button>
+                    <button id="signup">Sign Up!</button>
                 </form>
             </div>
+            <div class="pName">Thanks For Logging In!</div>
             <div class="login-screen">
                 <div class="form">
                 <form action="">
                     <h1>Login Here!</h1>
                     <input type="text" id="email" placeholder="Email Address"><br>
                     <input type="password" id="password" placeholder="Password"><br>
-                    <button>Login!</button>
+                    <button id="login">Login!</button>
                 </form>
             </div>
             </div>
@@ -66,7 +66,24 @@
         <div class="face"></div>
     </div>
 </div>
-<script src="lib/jquery-3.6.0.min.js"></script>
-<script src="app/app.js"></script>
-</body>
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.2.0/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.2.0/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.2.0/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/9.2.0/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/9.2.0/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/9.2.0/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/9.2.0/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/9.2.0/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/9.2.0/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/9.2.0/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <script src="lib/jquery-3.6.0.min.js"></script>
+    <script src="app/app.js"></script>
+  </body>
 </html>

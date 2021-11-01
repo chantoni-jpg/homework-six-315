@@ -1,0 +1,20 @@
+{
+  "name": "homework-six-315",
+  "version": "1.0.0",
+  "description": "Here is the link: https://in-info-web4.informatics.iupui.edu/~chantoni/homework-six-315/login.html",
+  "main": "index.js",
+  "scripts": {
+    "firebase local server": "firebase serve --only hosting",
+    "firebase deploy": "firebase deploy --except functions"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chantoni-jpg/homework-six-315.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chantoni-jpg/homework-six-315/issues"
+  },
+  "homepage": "https://github.com/chantoni-jpg/homework-six-315#readme"
+}
