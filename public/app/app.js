@@ -1,15 +1,3 @@
-$(document).ready(function () {
-  initListeners();
-  try {
-    let app = firebase.app();
-    initFirebase();
-    listeners();
-  } catch {
-    console.log(e);
-    console.log(errorMessage);
-  }
-});
-
 function initListeners() {
   let displayCount = 0;
 
@@ -27,18 +15,21 @@ function initFirebase() {
   firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
       console.log("connected");
-      $(".pName").css("display", "block");
+      $("#log-out").css("display", "inline-block");
+      $(".button").css("display", "none");
     } else {
       console.log("user is not there");
-      $(".pName").css("display", "none");
+      $("#log-out").css("display", "none");
+      $(".button").css("display", "inline-block");
     }
   });
 }
 
-function createUser() {
-  let password = $("#password").val();
-  let email = $("#email").val();
-
+function createUser(e) {
+  let password = $("#signPassword").val();
+  let email = $("#signEmail").val();
+  let fName = $("#fname").val();
+  let lName = $("#lname").val();
   firebase
     .auth()
     .createUserWithEmailAndPassword(email, password)
@@ -56,10 +47,9 @@ function createUser() {
 }
 
 function login() {
+  console.log("Login!");
   let password = $("#password").val();
   let email = $("#email").val();
-  let fName = $("#fname").val();
-  let lName = $("#lname").val();
   firebase
     .auth()
     .signInWithEmailAndPassword(email, password)
@@ -101,3 +91,35 @@ function listeners() {
     }
   });
 }
+function route() {
+  let hashTag = window.location.hash;
+  let pageID = hashTag.replace("#/", "");
+
+  if (pageID == "") {
+    navToPage("home");
+  } else {
+    navToPage(pageID);
+  }
+}
+
+function navToPage(pageName) {
+  $.get(`pages/${pageName}/${pageName}.html`, function (data) {
+    console.log(data);
+    $("#app").html(data);
+  });
+}
+function initListen() {
+  $(window).on("hashchange", route);
+  route();
+}
+$(document).ready(function () {
+  initListeners();
+  initListen();
+  try {
+    let app = firebase.app();
+    initFirebase();
+  } catch {
+    console.log(e);
+    console.log(errorMessage);
+  }
+});
