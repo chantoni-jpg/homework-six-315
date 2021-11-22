@@ -1,0 +1,103 @@
+.your {
+  width: 100%;
+  height: 800px;
+  background-image: linear-gradient(
+      to right,
+      rgba(167, 232, 189, 0.4),
+      rgba(167, 232, 189, 0.4)
+    ),
+    url(../images/recipe-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .yours {
+    position: relative;
+    right: 600px;
+    bottom: 200px;
+    white-space: nowrap;
+    font-family: Caveat Reg;
+    font-size: 15px;
+  }
+}
+.pizza-2 {
+  width: 300px;
+  height: 263px;
+  background-image: url(../images/recipe-pizza.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+  border-radius: 15px;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  margin-right: 300px;
+
+  .info-pizza-2 {
+    width: 224px;
+    height: 263px;
+    background-color: white;
+    border-radius: 15px;
+    display: inline-block;
+    margin-left: 300px;
+  }
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-decoration: underline;
+}
+#edit {
+  position: relative;
+  right: 850px;
+  top: 160px;
+  .edit-button {
+    font-size: 16px;
+    padding: 15px 40px;
+    text-align: center;
+    border-radius: 20px;
+    border: none;
+    font-family: Caveat Reg;
+    box-shadow: 2px 5px 2px #888888;
+    background-color: rgb(255, 217, 114);
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+#delete {
+  position: relative;
+  right: 800px;
+  top: 160px;
+  .delete-button {
+    font-size: 16px;
+    padding: 15px 40px;
+    text-align: center;
+    border-radius: 20px;
+    border: none;
+    font-family: Caveat Reg;
+    box-shadow: 2px 5px 2px #888888;
+    background-color: rgb(255, 217, 114);
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+#view {
+  position: relative;
+  right: 1000px;
+  .view-button {
+    font-size: 16px;
+    padding: 15px 40px;
+    text-align: center;
+    border-radius: 20px;
+    border: none;
+    font-family: Caveat Reg;
+    box-shadow: 2px 5px 2px #888888;
+    background-color: rgb(255, 217, 114);
+    text-decoration: none;
+    cursor: pointer;
+  }
+}

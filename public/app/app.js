@@ -1,27 +1,94 @@
-function initListeners() {
-  let displayCount = 0;
+var ingredCounter = 3;
+var instructCounter = 3;
 
-  $(".fa-bars").click(function () {
-    if (displayCount == 0) {
-      $(".mobile-links").css("display", "flex");
-      displayCount = 1;
-    } else {
-      $(".mobile-links").css("display", "none");
-      displayCount = 0;
-    }
-  });
+function openNav() {
+  document.getElementById("mySidenav").style.width = "100%";
 }
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+function addIngred(e) {
+  ingredCounter++;
+  $("#ingredients").append(
+    `<input id="ind${ingredCounter}" type="text" placeholder="Ingredient #${ingredCounter}">`
+  );
+}
+function addInstr(e) {
+  instructCounter++;
+  $("#instructions").append(
+    `<input id="ind${instructCounter}" type="text" placeholder="Instruction #${instructCounter}">`
+  );
+}
+
 function initFirebase() {
   firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
       console.log("connected");
       $("#log-out").css("display", "inline-block");
       $(".button").css("display", "none");
+      $(".loggedIn").css("display", "inline-block");
     } else {
       console.log("user is not there");
       $("#log-out").css("display", "none");
       $(".button").css("display", "inline-block");
+      $(".loggedIn").css("display", "none");
     }
+  });
+}
+
+function loadBrowse() {
+  $.getJSON("data/data.json", function (recipes) {
+    console.log(recipes.PIZZA);
+
+    $.each(recipes.PIZZA, function (index, recipe) {
+      console.log("recipe " + recipe.recipeName);
+      $("#pizza").append(
+        `<div class="title"><h3>${recipe.recipeName}</h3></div>
+        <div class="description"><p>${recipe.recipeDescription}</p></div>
+            <div class="time"><img src="images/time.svg"width="23" height="24">${recipe.time}</div>
+            <div class="servings"><img src="images/servings.svg"width="23" height="24">${recipe.servings}</div>`
+      );
+    });
+  });
+  $.getJSON("data/data.json", function (recipes) {
+    console.log(recipes.CHICKEN);
+
+    $.each(recipes.CHICKEN, function (index, recipe) {
+      console.log("recipe " + recipe.recipeName);
+      $("#chicken").append(
+        `<div class="title"><h3>${recipe.recipeName}</h3></div>
+        <div class="description"><p>${recipe.recipeDescription}</p></div>
+            <div class="time"><img src="images/time.svg"width="23" height="24">${recipe.time}</div>
+            <div class="servings"><img src="images/servings.svg"width="23" height="24">${recipe.servings}</div>`
+      );
+    });
+  });
+  $.getJSON("data/data.json", function (recipes) {
+    console.log(recipes.CHOWMEIN);
+
+    $.each(recipes.CHOWMEIN, function (index, recipe) {
+      console.log("recipe " + recipe.recipeName);
+      $("#chow").append(
+        `<div class="title"><h3>${recipe.recipeName}</h3></div>
+        <div class="description"><p>${recipe.recipeDescription}</p></div>
+            <div class="time"><img src="images/time.svg"width="23" height="24">${recipe.time}</div>
+            <div class="servings"><img src="images/servings.svg"width="23" height="24">${recipe.servings}</div>`
+      );
+    });
+  });
+  $.getJSON("data/data.json", function (recipes) {
+    console.log(recipes.BURGER);
+
+    $.each(recipes.BURGER, function (index, recipe) {
+      console.log("recipe " + recipe.recipeName);
+      $("#burger").append(
+        `<div class="title"><h3>${recipe.recipeName}</h3></div>
+        <div class="description"><p>${recipe.recipeDescription}</p></div>
+            <div class="time"><img src="images/time.svg"width="23" height="24">${recipe.time}</div>
+            <div class="servings"><img src="images/servings.svg"width="23" height="24">${recipe.servings}</div>`
+      );
+    });
   });
 }
 
@@ -99,6 +166,7 @@ function route() {
     navToPage("home");
   } else {
     navToPage(pageID);
+    loadBrowse();
   }
 }
 
@@ -112,8 +180,23 @@ function initListen() {
   $(window).on("hashchange", route);
   route();
 }
+
+function deleteData() {
+  var elem = document.getElementById("pizza");
+  var pizza = document.getElementById("pizzaImage");
+  var deleteBtn = document.getElementById("delete");
+  var edit = document.getElementById("edit");
+  var view = document.getElementById("view");
+  elem.remove();
+  pizza.remove();
+  deleteBtn.remove();
+  edit.remove();
+  view.remove();
+}
+
 $(document).ready(function () {
-  initListeners();
+  openNav();
+  closeNav();
   initListen();
   try {
     let app = firebase.app();

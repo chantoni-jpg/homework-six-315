@@ -1,0 +1,34 @@
+{
+    "PIZZA": [
+        {
+            "recipeName": "Supreme Pizza",
+            "recipeDescription": "Make pizza night super duper out of this world with homemade pizza. This recipe is supreme with vegetables and two types of meat. Yum!",
+            "time": "1hr 24min",
+            "servings": "4 servings"
+        }
+    ],
+    "CHICKEN": [
+        {
+            "recipeName": "Chicken Biryani",
+            "recipeDescription": "Chicken Biriyani is a bold and flavorful Indian with crazy tender bites of chicken with bell peppers in a deliciously spiced and fragrant rice.",
+            "time": "1hr 15min",
+            "servings": "6 servings"
+        }
+    ],
+    "BURGER": [
+        {
+            "recipeName": "Classic Burger",
+            "recipeDescription": "Sink your teeth into a delicious restaurant-style, hamburger recipe made from lean beef. Skip the prepackaged patties and take the extra time to craft up your own, and that little extra effort will be worth it",
+            "time": "30 min",
+            "servings": "4 servings"
+        }
+    ],
+    "CHOWMEIN": [
+        {
+            "recipeName": "Ch. Chow Mein",
+            "recipeDescription": "A great chow mein comes down to the sauce- it takes more than just soy sauce and sugar! Jam packed with a surprising amount of hidden vegetables, customize this Chicken Chow Mein recipe using your protein of choice!",
+            "time": "20min",
+            "servings": "4 servings"
+        }
+    ]
+}

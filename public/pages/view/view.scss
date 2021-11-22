@@ -1,0 +1,52 @@
+.view {
+  width: 100%;
+  height: 1200px;
+  .pizza-title {
+    position: relative;
+    right: 80px;
+    top: 90px;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-family: Lato;
+  }
+  .image {
+    width: 468px;
+    height: 421px;
+    background-image: url(../images/recipe-pizza.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-left: 200px;
+    margin-top: 200px;
+  }
+  .descrption {
+    position: relative;
+    left: 500px;
+    bottom: 170px;
+    font-family: Caveat Reg;
+  }
+  .ingredients {
+    margin-top: 50px;
+    font-family: Caveat Reg;
+  }
+  .instructions {
+    margin-top: 50px;
+    font-family: Caveat Reg;
+  }
+  #edit {
+    position: relative;
+    right: 0px;
+    .edit-button {
+      font-size: 16px;
+      padding: 15px 40px;
+      text-align: center;
+      border-radius: 20px;
+      border: none;
+      font-family: Caveat Reg;
+      box-shadow: 2px 5px 2px #888888;
+      background-color: rgb(255, 217, 114);
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}
