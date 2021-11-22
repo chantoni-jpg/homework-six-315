@@ -113,7 +113,7 @@ function createUser(e) {
     });
 }
 
-function login() {
+function logIn(e) {
   console.log("Login!");
   let password = $("#password").val();
   let email = $("#email").val();
